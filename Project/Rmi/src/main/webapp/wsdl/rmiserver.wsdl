@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="RmiServerService" targetNamespace="http://student.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://student.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:portType name="RmiServer">
+  </wsdl:portType>
+  <wsdl:binding name="RmiServerServiceSoapBinding" type="tns:RmiServer">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+  </wsdl:binding>
+  <wsdl:service name="RmiServerService">
+    <wsdl:port name="RmiServerPort" binding="tns:RmiServerServiceSoapBinding">
+      <soap:address location="http://localhost:8080/Rmi/services/RmiServerPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

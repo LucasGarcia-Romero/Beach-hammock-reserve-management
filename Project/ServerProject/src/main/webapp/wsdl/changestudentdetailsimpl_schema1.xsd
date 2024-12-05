@@ -1,0 +1,65 @@
+<xs:schema xmlns:tns="http://student.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://student.com/" version="1.0">
+
+  <xs:element name="addReserve" type="tns:addReserve"/>
+
+  <xs:element name="addReserveResponse" type="tns:addReserveResponse"/>
+
+  <xs:element name="addUser" type="tns:addUser"/>
+
+  <xs:element name="addUserResponse" type="tns:addUserResponse"/>
+
+  <xs:element name="cancelReserve" type="tns:cancelReserve"/>
+
+  <xs:element name="cancelReserveResponse" type="tns:cancelReserveResponse"/>
+
+  <xs:element name="showList" type="tns:showList"/>
+
+  <xs:element name="showListResponse" type="tns:showListResponse"/>
+
+  <xs:complexType name="addUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelReserve">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="cancelReserveResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="showList">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="showListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addReserve">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addReserveResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

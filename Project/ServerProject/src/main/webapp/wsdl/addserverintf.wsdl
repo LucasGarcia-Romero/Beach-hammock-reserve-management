@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AddServerIntfService" targetNamespace="http://student.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://student.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://student.com/" schemaLocation="addserverintf_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="reserve">
+    <wsdl:part name="parameters" element="tns:reserve">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="show">
+    <wsdl:part name="parameters" element="tns:show">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="reserveResponse">
+    <wsdl:part name="parameters" element="tns:reserveResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancel">
+    <wsdl:part name="parameters" element="tns:cancel">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelResponse">
+    <wsdl:part name="parameters" element="tns:cancelResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="showResponse">
+    <wsdl:part name="parameters" element="tns:showResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="AddServerIntf">
+    <wsdl:operation name="cancel">
+      <wsdl:input name="cancel" message="tns:cancel">
+    </wsdl:input>
+      <wsdl:output name="cancelResponse" message="tns:cancelResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserve">
+      <wsdl:input name="reserve" message="tns:reserve">
+    </wsdl:input>
+      <wsdl:output name="reserveResponse" message="tns:reserveResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="show">
+      <wsdl:input name="show" message="tns:show">
+    </wsdl:input>
+      <wsdl:output name="showResponse" message="tns:showResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AddServerIntfServiceSoapBinding" type="tns:AddServerIntf">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="cancel">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancel">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="reserve">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="reserve">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="reserveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="show">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="show">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="showResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AddServerIntfService">
+    <wsdl:port name="AddServerIntfPort" binding="tns:AddServerIntfServiceSoapBinding">
+      <soap:address location="http://localhost:7764/ServerProject"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

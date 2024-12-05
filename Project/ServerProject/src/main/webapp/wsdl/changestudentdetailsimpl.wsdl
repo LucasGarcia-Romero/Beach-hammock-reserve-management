@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ChangeStudentDetailsImplService" targetNamespace="http://student.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://student.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://student.com/" schemaLocation="changestudentdetailsimpl_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="addUserResponse">
+    <wsdl:part name="parameters" element="tns:addUserResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addReserve">
+    <wsdl:part name="parameters" element="tns:addReserve">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="showListResponse">
+    <wsdl:part name="parameters" element="tns:showListResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addReserveResponse">
+    <wsdl:part name="parameters" element="tns:addReserveResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addUser">
+    <wsdl:part name="parameters" element="tns:addUser">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelReserveResponse">
+    <wsdl:part name="parameters" element="tns:cancelReserveResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cancelReserve">
+    <wsdl:part name="parameters" element="tns:cancelReserve">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="showList">
+    <wsdl:part name="parameters" element="tns:showList">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ChangeStudentDetailsImpl">
+    <wsdl:operation name="addUser">
+      <wsdl:input name="addUser" message="tns:addUser">
+    </wsdl:input>
+      <wsdl:output name="addUserResponse" message="tns:addUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelReserve">
+      <wsdl:input name="cancelReserve" message="tns:cancelReserve">
+    </wsdl:input>
+      <wsdl:output name="cancelReserveResponse" message="tns:cancelReserveResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showList">
+      <wsdl:input name="showList" message="tns:showList">
+    </wsdl:input>
+      <wsdl:output name="showListResponse" message="tns:showListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addReserve">
+      <wsdl:input name="addReserve" message="tns:addReserve">
+    </wsdl:input>
+      <wsdl:output name="addReserveResponse" message="tns:addReserveResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ChangeStudentDetailsImplServiceSoapBinding" type="tns:ChangeStudentDetailsImpl">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="addUser">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addUser">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addUserResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="cancelReserve">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cancelReserve">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cancelReserveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showList">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="showList">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="showListResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addReserve">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="addReserve">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="addReserveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ChangeStudentDetailsImplService">
+    <wsdl:port name="ChangeStudentDetailsImplPort" binding="tns:ChangeStudentDetailsImplServiceSoapBinding">
+      <soap:address location="http://localhost:8081/ServerProject"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
